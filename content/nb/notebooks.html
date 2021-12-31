@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L’accelerazione di gravità &#8212; M Faber</title>
+    <title>I notebook &#8212; M Faber</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -44,8 +44,6 @@
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -55,7 +53,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="I calcoli dinamici, p. 3" href="../f21/Basi%20programmazione%2006.html" />
+    <link rel="next" title="Markdown MyST" href="markdown01.html" />
+    <link rel="prev" title="La prima lezione" href="../f21/Basi%20programmazione%2001.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,19 +115,19 @@
   Programmazione
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../f21/Basi%20programmazione%2001.html">
    La prima lezione
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../nb/notebooks.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    I notebook
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../nb/markdown01.html">
+  <a class="reference internal" href="markdown01.html">
    Markdown MyST
   </a>
  </li>
@@ -170,9 +169,9 @@
   Laboratorio
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab/pendolo.html">
    L’accelerazione di gravità
   </a>
  </li>
@@ -217,7 +216,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/lab/pendolo.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/nb/notebooks.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -242,7 +241,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/lab/pendolo.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/nb/notebooks.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -265,29 +264,16 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#il-pendolo-semplice">
-   Il pendolo semplice
+  <a class="reference internal nav-link" href="#celle">
+   Celle
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#l-esperimento">
-   L’esperimento
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#i-valori-misurati">
-   I valori misurati
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#il-risultato">
-   Il risultato
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#l-errore">
-   L’errore
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#celle-di-markdown">
+     Celle di markdown
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -300,107 +286,31 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="l-accelerazione-di-gravita">
-<span id="title-misurag"></span><h1>L’accelerazione di gravità<a class="headerlink" href="#l-accelerazione-di-gravita" title="Permalink to this headline">¶</a></h1>
-<p>L’accelerazione di gravità <span class="math notranslate nohighlight">\(g\)</span> varia da punto a punto intorno alla superficie terrestre.
-Il suo valore <em>convenzionale</em> è</p>
-<div class="math notranslate nohighlight" id="equation-eq-gconv">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-gconv" title="Permalink to this equation">¶</a></span>\[g = 9.80665 \ \mathrm{m/s^2}\]</div>
-<div class="section" id="il-pendolo-semplice">
-<h2>Il pendolo semplice<a class="headerlink" href="#il-pendolo-semplice" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="fig-pendolo">
-<a class="reference internal image-reference" href="../../_images/fig-pendolo.png"><img alt="../../_images/fig-pendolo.png" src="../../_images/fig-pendolo.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Da OpenClipArt</span><a class="headerlink" href="#fig-pendolo" title="Permalink to this image">¶</a></p>
-</div>
-<p>Per <em>misurare</em> l’accelerazione <span class="math notranslate nohighlight">\(g\)</span>, un modo facile è utilizzare un pendolo semplice.
-Occorre misurare:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="i-notebook">
+<span id="title-notebooks"></span><h1>I notebook<a class="headerlink" href="#i-notebook" title="Permalink to this headline">¶</a></h1>
+<p>Un notebook è una pagina web che contiene</p>
 <ul class="simple">
-<li><p>la lunghezza <span class="math notranslate nohighlight">\(\mathcal{l}\)</span>;</p></li>
-<li><p>il periodo di oscillazione <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p><em>testo</em> formattato, nelle celle di markdown;</p></li>
+<li><p><em>programmi</em>, nelle celle di codice, che producono risultati attinenti al contenuto testuale.</p></li>
 </ul>
-<p>Queste due grandezze, che misuriamo, sono legate dalla</p>
-<div class="math notranslate nohighlight" id="equation-eq-tpendolo">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-tpendolo" title="Permalink to this equation">¶</a></span>\[T = 2 \pi \sqrt{ \frac{\mathcal{l}}{g} }\]</div>
-<p>Nella relazione <a class="reference internal" href="#equation-eq-tpendolo">(2)</a>, se misuriamo <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(g\)</span>, l’unica grandezza sperimentale ignota è <span class="math notranslate nohighlight">\(g\)</span>.</p>
-<p>Da questa relazione si può ricavare <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-eq-gricav">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq-gricav" title="Permalink to this equation">¶</a></span>\[g = 4 \pi^2 \frac{\mathcal{l}}{T^2}\]</div>
-<p>Nel seguito, per svolgere i calcoli, occorrono semplicemente</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gli import</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
+<p>Un ambiente di programmazione e/o analisi può offrire un’interfaccia a notebook per interagire con l’utente.<br/>
+ad esempio, <em>Jupyter</em> consente la preparazione di un notebook usando vari linguaggi.<br/>
+Altro esempio, <em>SageMath</em> è un ambiente per programmare matematica che offre un’interfaccia a notebook.</p>
+<div class="section" id="celle">
+<h2>Celle<a class="headerlink" href="#celle" title="Permalink to this headline">¶</a></h2>
+<p>All’interno di un notebook si possono avere:</p>
+<ul class="simple">
+<li><p>celle di markdown,</p></li>
+<li><p>celle di codice.
+La natura di una cella è determinata dalla scelta in un apposito menù (<code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:celltype</span></code>).</p></li>
+</ul>
+<div class="figure align-default" id="fig-celltype">
+<a class="reference internal image-reference" href="../../_images/celltype.png"><img alt="../../_images/celltype.png" src="../../_images/celltype.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Menù del tipo di cella</span><a class="headerlink" href="#fig-celltype" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="l-esperimento">
-<h2>L’esperimento<a class="headerlink" href="#l-esperimento" title="Permalink to this headline">¶</a></h2>
-<p>Lo scopo dell’esperimento <em>non</em> è quello di trovare <em>un</em> valore per <span class="math notranslate nohighlight">\(g\)</span>.
-Occorre trovare un valore per <span class="math notranslate nohighlight">\(g\)</span> <em>sufficientemente preciso</em> da mostrare quanto la gravità locale differisca dal valore convenzionale <a class="reference internal" href="#equation-eq-gconv">(1)</a> dato sopra.<br/>
-Diciamo che grsso modo l’errore su <span class="math notranslate nohighlight">\(g\)</span> dovrebbe essere al massimo</p>
-<div class="math notranslate nohighlight" id="equation-eq-gerror">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-gerror" title="Permalink to this equation">¶</a></span>\[e_g = \pm 0.002 \ \mathrm{m/s^2}\]</div>
-<p>che corriponde ad un errore relativo</p>
-<div class="math notranslate nohighlight" id="equation-eq-gerrorrel">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-gerrorrel" title="Permalink to this equation">¶</a></span>\[e_{rg} = \frac{e_g}{g} = \pm 0.02 \mathrm{%}\]</div>
-<p>Questo errore relativo vincola gli errori relativi su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>, errori relativi che devono essere <em>più piccoli</em>.
-Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{m}\)</span>, l’errore su questo valore dovrebbe essere più piccolo di</p>
-<div class="math notranslate nohighlight" id="equation-eq-lerror">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-lerror" title="Permalink to this equation">¶</a></span>\[e_{l} &lt; \pm 2 \ \mathrm{mm}\]</div>
-<p>Per quanto riguarda il periodo <span class="math notranslate nohighlight">\(T\)</span>, dovrebbe essere</p>
-<div class="math notranslate nohighlight" id="equation-eq-terror">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-terror" title="Permalink to this equation">¶</a></span>\[e_{T} &lt; \pm 0.6 \ \mathrm{ms}\]</div>
-<p>questa è una precisione difficile da raggiungere con <em>una sola</em> misura.</p>
-</div>
-<div class="section" id="i-valori-misurati">
-<h2>I valori misurati<a class="headerlink" href="#i-valori-misurati" title="Permalink to this headline">¶</a></h2>
-<p>Alla fine dell’esperimento, riportiamo i valori sperimentali di <span class="math notranslate nohighlight">\(\mathcal{l}\)</span> e <span class="math notranslate nohighlight">\(g\)</span> in unità S.I.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># in metri</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mf">2.500</span>
-<span class="c1"># in secondi</span>
-<span class="n">T</span> <span class="o">=</span> <span class="mf">3.1745</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="il-risultato">
-<h2>Il risultato<a class="headerlink" href="#il-risultato" title="Permalink to this headline">¶</a></h2>
-<p>I valori sperimentali portano ad un valore di <span class="math notranslate nohighlight">\(g\)</span></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il valore misurato di g = </span><span class="si">{</span><span class="n">g</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il valore misurato di g = 9.794
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="l-errore">
-<h2>L’errore<a class="headerlink" href="#l-errore" title="Permalink to this headline">¶</a></h2>
-<p>L’errore sul valore di <span class="math notranslate nohighlight">\(g\)</span> dipende ovviamente da quelli su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<p>Innanzitutto usiamo <span class="math notranslate nohighlight">\(\pi\)</span> con una sufficiente precisione:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il valore di pi è </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="si">:</span><span class="s1">.6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il valore di pi è 3.141593
-</pre></div>
-</div>
-</div>
+<div class="section" id="celle-di-markdown">
+<h3>Celle di markdown<a class="headerlink" href="#celle-di-markdown" title="Permalink to this headline">¶</a></h3>
+<p>Le celle di markdown sono caselle di testo <em>quasi</em> normale, Il testo può essere arricchito (<em>rich text</em>) tramite i markdown, che sono tag che consentono di migliorare l’aspetto del testo e di aggiungere funzionalità tipiche di una pagina web (tabelle, figure, link).</p>
 </div>
 </div>
 </div>
@@ -418,7 +328,7 @@ Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\lab"
+            path: "./content\nb"
         },
         predefinedOutput: true
     }
@@ -430,12 +340,19 @@ Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../f21/Basi%20programmazione%2006.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../f21/Basi%20programmazione%2001.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">I calcoli dinamici, p. 3</p>
+            <p class="prev-next-title">La prima lezione</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown01.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown MyST</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
