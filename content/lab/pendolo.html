@@ -55,6 +55,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="L’accelerazione di gravità 2" href="pendolo2.html" />
     <link rel="prev" title="I calcoli dinamici, p. 3" href="../f21/Basi%20programmazione%2006.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -176,6 +177,11 @@
    L’accelerazione di gravità
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pendolo2.html">
+   L’accelerazione di gravità 2
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -273,6 +279,18 @@
   <a class="reference internal nav-link" href="#l-esperimento">
    L’esperimento
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-lunghezza-del-pendolo">
+     La lunghezza del pendolo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#il-periodo">
+     Il periodo
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#i-valori-misurati">
@@ -321,16 +339,15 @@ Occorre misurare:</p>
 <p>Queste due grandezze, che misuriamo, sono legate dalla</p>
 <div class="math notranslate nohighlight" id="equation-eq-tpendolo">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-tpendolo" title="Permalink to this equation">¶</a></span>\[T = 2 \pi \sqrt{ \frac{\mathcal{l}}{g} }\]</div>
-<p>Nella relazione <a class="reference internal" href="#equation-eq-tpendolo">(2)</a>, se misuriamo <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(g\)</span>, l’unica grandezza sperimentale ignota è <span class="math notranslate nohighlight">\(g\)</span>.</p>
-<p>Da questa relazione si può ricavare <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<p>Nella relazione <a class="reference internal" href="#equation-eq-tpendolo">(2)</a>, se misuriamo <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(g\)</span>, l’unica grandezza sperimentale ignota è <span class="math notranslate nohighlight">\(g\)</span>.<br/>
+Da questa relazione si può ricavare <span class="math notranslate nohighlight">\(g\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-gricav">
 <span class="eqno">(3)<a class="headerlink" href="#equation-eq-gricav" title="Permalink to this equation">¶</a></span>\[g = 4 \pi^2 \frac{\mathcal{l}}{T^2}\]</div>
-<p>Nel seguito, per svolgere i calcoli, occorrono semplicemente</p>
+<p>Per svolgere il calcolo <a class="reference internal" href="#equation-eq-gricav">(3)</a> occorre solo la libreria</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gli import</span>
 <span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -340,20 +357,44 @@ Occorre misurare:</p>
 <h2>L’esperimento<a class="headerlink" href="#l-esperimento" title="Permalink to this headline">¶</a></h2>
 <p>Lo scopo dell’esperimento <em>non</em> è quello di trovare <em>un</em> valore per <span class="math notranslate nohighlight">\(g\)</span>.
 Occorre trovare un valore per <span class="math notranslate nohighlight">\(g\)</span> <em>sufficientemente preciso</em> da mostrare quanto la gravità locale differisca dal valore convenzionale <a class="reference internal" href="#equation-eq-gconv">(1)</a> dato sopra.<br/>
-Diciamo che grsso modo l’errore su <span class="math notranslate nohighlight">\(g\)</span> dovrebbe essere al massimo</p>
+Diciamo che grosso modo l’errore su <span class="math notranslate nohighlight">\(g\)</span> dovrebbe essere al massimo</p>
 <div class="math notranslate nohighlight" id="equation-eq-gerror">
 <span class="eqno">(4)<a class="headerlink" href="#equation-eq-gerror" title="Permalink to this equation">¶</a></span>\[e_g = \pm 0.002 \ \mathrm{m/s^2}\]</div>
-<p>che corriponde ad un errore relativo</p>
+<p>che corrisponde ad un errore relativo</p>
 <div class="math notranslate nohighlight" id="equation-eq-gerrorrel">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-gerrorrel" title="Permalink to this equation">¶</a></span>\[e_{rg} = \frac{e_g}{g} = \pm 0.02 \mathrm{%}\]</div>
-<p>Questo errore relativo vincola gli errori relativi su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>, errori relativi che devono essere <em>più piccoli</em>.
-Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{m}\)</span>, l’errore su questo valore dovrebbe essere più piccolo di</p>
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-gerrorrel" title="Permalink to this equation">¶</a></span>\[e_{rg} = \frac{e_g}{g} = \pm 0.02 \%\]</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>I valori misurati dell’accelerazione di gravità sono, grosso modo,</p>
+<div class="math notranslate nohighlight">
+\[
+9.789 \ \mathrm{m/s^2} \dots 9.823 \ \mathrm{m/s^2}
+\]</div>
+</div>
+<div class="section" id="la-lunghezza-del-pendolo">
+<h3>La lunghezza del pendolo<a class="headerlink" href="#la-lunghezza-del-pendolo" title="Permalink to this headline">¶</a></h3>
+<p>Il pendolo semplice è costituito da un filo senza massa, inestensibile di lunghezza <span class="math notranslate nohighlight">\(l\)</span>, che sostiene una massa teoricamente puntiforme.</p>
+<p>La massa appesa ovviamente <em>non</em> può essere puntiforme; deve essere comunque di piccole dimensioni, di forma regolare e avere un baricentro determinabile.</p>
+<p>La lunghezza <span class="math notranslate nohighlight">\(l\)</span> del filo è quella compresa tra il punto di sospensione superiore, <em>fisso</em> nel sistema del laboratorio,
+e il baricentro della massa appesa.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>La grandezza fisica <span class="math notranslate nohighlight">\(l\)</span> <em>non</em> è quindi la semplice lunghezza del filo.<br/>
+Il punto di sostegno superiore <em>deve</em> rimanere fisso, altrimenti <em>non</em> si realizza un pendolo semplice.</p>
+</div>
+<p>L’errore relativo <a class="reference internal" href="#equation-eq-gerrorrel">(5)</a> su <span class="math notranslate nohighlight">\(g\)</span> vincola quello su <span class="math notranslate nohighlight">\(l\)</span>, che deve essere <em>più piccolo</em>.
+Quindi, se fosse per esempio <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{m}\)</span>, l’errore su questo valore dovrebbe essere più piccolo di</p>
 <div class="math notranslate nohighlight" id="equation-eq-lerror">
 <span class="eqno">(6)<a class="headerlink" href="#equation-eq-lerror" title="Permalink to this equation">¶</a></span>\[e_{l} &lt; \pm 2 \ \mathrm{mm}\]</div>
-<p>Per quanto riguarda il periodo <span class="math notranslate nohighlight">\(T\)</span>, dovrebbe essere</p>
+<p>Una strategiia in questo esperimento è partire con un filo il più lungo possibile; in questo modo si minimizza anche l’errore sulla posizione della massa appesa.</p>
+</div>
+<div class="section" id="il-periodo">
+<h3>Il periodo<a class="headerlink" href="#il-periodo" title="Permalink to this headline">¶</a></h3>
+<p>Per quanto riguarda il periodo <span class="math notranslate nohighlight">\(T\)</span>, il suo errore dovrebbe essere</p>
 <div class="math notranslate nohighlight" id="equation-eq-terror">
 <span class="eqno">(7)<a class="headerlink" href="#equation-eq-terror" title="Permalink to this equation">¶</a></span>\[e_{T} &lt; \pm 0.6 \ \mathrm{ms}\]</div>
 <p>questa è una precisione difficile da raggiungere con <em>una sola</em> misura.</p>
+</div>
 </div>
 <div class="section" id="i-valori-misurati">
 <h2>I valori misurati<a class="headerlink" href="#i-valori-misurati" title="Permalink to this headline">¶</a></h2>
@@ -371,7 +412,7 @@ Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{
 </div>
 <div class="section" id="il-risultato">
 <h2>Il risultato<a class="headerlink" href="#il-risultato" title="Permalink to this headline">¶</a></h2>
-<p>I valori sperimentali portano ad un valore di <span class="math notranslate nohighlight">\(g\)</span></p>
+<p>I valori sperimentali portano ad un valore di <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span>
@@ -388,8 +429,8 @@ Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{
 </div>
 <div class="section" id="l-errore">
 <h2>L’errore<a class="headerlink" href="#l-errore" title="Permalink to this headline">¶</a></h2>
-<p>L’errore sul valore di <span class="math notranslate nohighlight">\(g\)</span> dipende ovviamente da quelli su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<p>Innanzitutto usiamo <span class="math notranslate nohighlight">\(\pi\)</span> con una sufficiente precisione:</p>
+<p>L’errore sul valore di <span class="math notranslate nohighlight">\(g\)</span> dipende ovviamente dagli errori su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Innanzitutto, se facciamo i conti con la calcolatrice, usiamo <span class="math notranslate nohighlight">\(\pi\)</span> con una sufficiente precisione:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il valore di pi è </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="si">:</span><span class="s1">.6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -402,6 +443,8 @@ Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{
 </div>
 </div>
 </div>
+<p>opure utilizziamo il tasto <span class="math notranslate nohighlight">\(\pi\)</span> dedicato.</p>
+<p>Per calcolare l’errore sul risultato conviene utizzare un <a class="reference internal" href="pendolo2.html#title-misurag2"><span class="std std-ref">notebook</span></a> più articolato.</p>
 </div>
 </div>
 
@@ -436,6 +479,13 @@ Quindi, se fosse <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">I calcoli dinamici, p. 3</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="pendolo2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">L’accelerazione di gravità 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
