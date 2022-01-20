@@ -165,6 +165,11 @@
    I calcoli dinamici, p. 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vettori.html">
+   I vettori
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -276,6 +281,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#somma-di-polinomi">
+   Somma di polinomi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prodotto-di-polinomi">
    Prodotto di polinomi
   </a>
@@ -286,8 +296,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#di-tutto">
-   Di tutto
+  <a class="reference internal nav-link" href="#esempio-avanzato">
+   Esempio avanzato
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -298,6 +308,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#divisione-ta-polinomi">
    Divisione ta polinomi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#divisori">
+   Divisori
   </a>
  </li>
 </ul>
@@ -316,7 +331,7 @@
 <p><img alt="polinomio" src="../../_images/polynomials.png" /></p>
 <p>E’ importante lavorare con i simboli, <em>non</em> con i soli numeri.</p>
 <p>In questa lezione vogliamo esaminare le operazioni con i polinomi.
-In particolare esamineremo:</p>
+In particolare analizzeremo:</p>
 <ul class="simple">
 <li><p>somma di due polinomi</p></li>
 <li><p>prodotto di due polinomi</p></li>
@@ -333,11 +348,13 @@ In particolare esamineremo:</p>
 </div>
 </div>
 </div>
+<p>La libreria <em>sympy</em> è quella che consente di svolgere calcoli simbolici, vale a dire effettuare operazioni che coinvolgano sia numeri che lettere.<br/>
+La teoria à quella del calcolo letterale che si impara al primo anno di liceo.</p>
 <div class="section" id="gli-ingredienti">
 <h2>Gli ingredienti<a class="headerlink" href="#gli-ingredienti" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># le variabili che utilizzeremo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># le variabili ed i rispettivi simboliche utilizzeremo</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a, b, x, n&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -345,16 +362,37 @@ In particolare esamineremo:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># il primo polinomio (binomio)</span>
-<span class="n">P1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">b</span>
-<span class="n">P2</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># i primi polinomii</span>
+<span class="n">P1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">b</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="section" id="somma-di-polinomi">
+<h2>Somma di polinomi<a class="headerlink" href="#somma-di-polinomi" title="Permalink to this headline">¶</a></h2>
+<p>E’ ovviamente possibile sommare simbolicamente due polinomi.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>E’ possibile sommare solo i <em>monomi</em> simili. In generale la somma di due polinomi si lascia indicata, solo si riducono gli eventuali termini simili.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P1</span> <span class="o">+</span> <span class="n">P2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 3 a x^{2} + 5 a x + 3 b + 5\]</div>
+</div>
+</div>
+</div>
 <div class="section" id="prodotto-di-polinomi">
 <h2>Prodotto di polinomi<a class="headerlink" href="#prodotto-di-polinomi" title="Permalink to this headline">¶</a></h2>
+<p>Il notebook ci fa risparmiare molta fatica calcolando per noi il prodotto di due polinomi.<br/>
+Notiamo che, moltiplicando ad esempio un binomio (due termini) per un trinomio (tre termini) dobbiamo eseguire <span class="math notranslate nohighlight">\(2 \times 3 = 6\)</span> prodotti di monomi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">(</span><span class="n">P1</span> <span class="o">*</span> <span class="n">P2</span><span class="p">)</span>
@@ -363,45 +401,66 @@ In particolare esamineremo:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 6 a x^{3} + 4 a x^{2} + 10 a + 9 b x^{3} + 6 b x^{2} + 15 b\]</div>
+\[\displaystyle 6 a^{2} x^{3} + 6 a^{2} x^{2} + 9 a b x^{2} + 9 a b x + 10 a x + 15 b\]</div>
 </div>
 </div>
 </div>
 <div class="section" id="potenza-di-un-binomio">
 <h2>Potenza di un binomio<a class="headerlink" href="#potenza-di-un-binomio" title="Permalink to this headline">¶</a></h2>
-<p>Calcoliamo il quadrato e il cubo di un polinomio.</p>
+<p>Le potenze di un polinomio non sono un problema.<br/>
+Al liceo si impara il quadrato di un bionomio.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># il quadrato</span>
-<span class="n">expand</span><span class="p">(</span><span class="n">P1</span><span class="o">*</span><span class="n">P1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># il quadrato di un binomio</span>
+<span class="n">expand</span><span class="p">(</span><span class="n">P1</span> <span class="o">*</span> <span class="n">P1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 4 a^{2} + 12 a b + 9 b^{2}\]</div>
+\[\displaystyle 4 a^{2} x^{2} + 12 a b x + 9 b^{2}\]</div>
+</div>
+</div>
+<p>Ora possiamo ottenere subito il quadrato e il cubo di un polinomio.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># il quadrato</span>
+<span class="n">expand</span><span class="p">(</span><span class="n">P2</span><span class="o">*</span><span class="n">P2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 9 a^{2} x^{4} + 18 a^{2} x^{3} + 9 a^{2} x^{2} + 30 a x^{2} + 30 a x + 25\]</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># il cubo</span>
-<span class="n">expand</span><span class="p">(</span><span class="n">P1</span><span class="o">*</span><span class="n">P1</span><span class="o">*</span><span class="n">P1</span><span class="p">)</span>
+<span class="n">expand</span><span class="p">(</span><span class="n">P2</span><span class="o">*</span><span class="n">P2</span><span class="o">*</span><span class="n">P2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 8 a^{3} + 36 a^{2} b + 54 a b^{2} + 27 b^{3}\]</div>
+\[\displaystyle 27 a^{3} x^{6} + 81 a^{3} x^{5} + 81 a^{3} x^{4} + 27 a^{3} x^{3} + 135 a^{2} x^{4} + 270 a^{2} x^{3} + 135 a^{2} x^{2} + 225 a x^{2} + 225 a x + 125\]</div>
 </div>
 </div>
+<p>Apprezziamo il notebook, calcolando con carta e penna il cubo di un trinomio, dovremmo eseguire <span class="math notranslate nohighlight">\(3 \times 3\times 3 = 27\)</span> prodotti di monomi.</p>
 </div>
-<div class="section" id="di-tutto">
-<h2>Di tutto<a class="headerlink" href="#di-tutto" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="esempio-avanzato">
+<h2>Esempio avanzato<a class="headerlink" href="#esempio-avanzato" title="Permalink to this headline">¶</a></h2>
+<p>I simboli possono apparire anche come esponenti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P3</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="o">**</span><span class="n">n</span> <span class="o">*</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="o">**</span><span class="n">n</span>
-
-<span class="c1"># esegue</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># riscrive</span>
 <span class="n">expand</span><span class="p">(</span><span class="n">P3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -411,10 +470,29 @@ In particolare esamineremo:</p>
 \[\displaystyle a^{3} a^{n} b^{2 n}\]</div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># trova il quadrato</span>
+
+<span class="n">expand</span><span class="p">(</span><span class="n">P3</span><span class="o">*</span><span class="n">P3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a^{6} a^{2 n} b^{4 n}\]</div>
+</div>
+</div>
 </div>
 <div class="section" id="fattorizzazione-di-un-polinomio">
 <h2>Fattorizzazione di un polinomio<a class="headerlink" href="#fattorizzazione-di-un-polinomio" title="Permalink to this headline">¶</a></h2>
-<p>La fattorizzazione di un polinomio corrisponde, a livello elementare, alle operazioni di raccoglimento dei fattori comuni.</p>
+<p>La fattorizzazione di un polinomio corrisponde, a livello elementare, per esempio, alle operazioni di raccoglimento dei fattori comuni.<br/>
+La fattorizzazione di un polinomio <em>può</em> essere il primo passo per la soluzione di un’equazione.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Il raccoglimento dei fattori comuni porta alla fattorizzazione di un polinomio. Questa può essere ottenuta in altri modi, per esempio mediante i prodotti notevoli.</p>
+</div>
+<p>Vediamo un esempio semplice.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scomposizione</span>
@@ -427,21 +505,11 @@ In particolare esamineremo:</p>
 \[\displaystyle 2 x \left(3 x - 1\right)\]</div>
 </div>
 </div>
+<p>Poi esempi meno banali.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scomposizione</span>
-<span class="n">factor</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 2 x \left(x + 1\right) \left(4 x - 1\right)\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -450,59 +518,70 @@ In particolare esamineremo:</p>
 \[\displaystyle \left(x - 6\right) \left(x - 1\right)\]</div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x \left(x + 1\right) \left(4 x - 1\right)\]</div>
+</div>
+</div>
 </div>
 <div class="section" id="divisione-ta-polinomi">
 <h2>Divisione ta polinomi<a class="headerlink" href="#divisione-ta-polinomi" title="Permalink to this headline">¶</a></h2>
 <p>La <em>divisione</em> tra polinomi <em>non</em> è sempre possibile:
-Supponiamo di voler effettuare la divisione
-$<span class="math notranslate nohighlight">\(\frac{P_1}{P_2} \)</span>$
-La divisione è possibile se</p>
+Supponiamo di voler effettuare la divisione</p>
+<div class="math notranslate nohighlight">
+\[\frac{P_1}{P_2} \]</div>
+<p>La divisione è possibile se</p>
 <ul class="simple">
 <li><p>il dividendo <span class="math notranslate nohighlight">\(P_1\)</span> è di grado <em>maggiore o uguale</em> del divisore <span class="math notranslate nohighlight">\(P_2\)</span>;</p></li>
 <li><p>esiste un quoziente <span class="math notranslate nohighlight">\(Q\)</span>;</p></li>
 <li><p>può esserci un resto <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
 </ul>
-<p>Deve risultare
-$<span class="math notranslate nohighlight">\( P_1 = Q \cdot P_2 + R \)</span>$</p>
+<p>Deve risultare</p>
+<div class="math notranslate nohighlight">
+\[ P_1 = Q \cdot P_2 + R \]</div>
+<p>Se <span class="math notranslate nohighlight">\(R = 0\)</span>, allora <span class="math notranslate nohighlight">\(P_1\)</span> <em>è divisibile</em> per <span class="math notranslate nohighlight">\(P_2\)</span>.</p>
+<p>Se <span class="math notranslate nohighlight">\(P_1\)</span> è divisibile per <span class="math notranslate nohighlight">\(P_2\)</span>, allora esiste un polinomio <span class="math notranslate nohighlight">\(Q\)</span> tale che</p>
+<div class="math notranslate nohighlight">
+\[ P_1 = Q \cdot P_2 \]</div>
+<p>Questo vuole anche dire che, se fattorizzo <span class="math notranslate nohighlight">\(P_1\)</span>, tra i fattori devo trovare <span class="math notranslate nohighlight">\(P_2\)</span>.</p>
+<p>Primo esempio</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esempio</span>
-<span class="n">P1</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
-
-<span class="n">grado1</span> <span class="o">=</span> <span class="n">degree</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># che è di grado</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il grado di P1 è </span><span class="si">{</span><span class="n">grado1</span><span class="si">}</span><span class="s1"> in x.&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Due polinomi</span>
+<span class="n">P4</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span>
+<span class="n">P5</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Controlliamo il grado in <span class="math notranslate nohighlight">\(x\)</span> dei due polinomi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grado4</span> <span class="o">=</span> <span class="n">degree</span><span class="p">(</span><span class="n">P4</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il grado di P4 è </span><span class="si">{</span><span class="n">grado4</span><span class="si">}</span><span class="s1"> in x.&#39;</span><span class="p">)</span>
+<span class="n">grado5</span> <span class="o">=</span> <span class="n">degree</span><span class="p">(</span><span class="n">P5</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il grado di P5 è </span><span class="si">{</span><span class="n">grado5</span><span class="si">}</span><span class="s1"> in x.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il grado di P1 è 2 in x.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il grado di P4 è 2 in x.
+Il grado di P5 è 1 in x.
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">6</span>
-
-<span class="n">grado2</span> <span class="o">=</span> <span class="n">degree</span><span class="p">(</span><span class="n">P2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># che è di grado</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il grado di P2 è </span><span class="si">{</span><span class="n">grado2</span><span class="si">}</span><span class="s1"> in x.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il grado di P2 è 1 in x.
-</pre></div>
-</div>
-</div>
-</div>
+<p>Effettuiamo la divisione, non importa per il momento come, ci pensa la libreria.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dividiamo</span>
-<span class="n">div</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">)</span>
+<span class="n">div</span><span class="p">(</span><span class="n">P4</span><span class="p">,</span> <span class="n">P5</span><span class="p">)</span>
 
 <span class="c1"># il risultato è una coppia (quoziente, resto) </span>
 </pre></div>
@@ -517,21 +596,36 @@ $<span class="math notranslate nohighlight">\( P_1 = Q \cdot P_2 + R \)</span>$<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># il risultato può essere riscritto</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">div</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La divisione di P1 e P2 da </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> e resto </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">div</span><span class="p">(</span><span class="n">P4</span><span class="p">,</span> <span class="n">P5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La divisione di P4 e P5 dà </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> e resto </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La divisione di P1 e P2 da x - 1 e resto 0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La divisione di P4 e P5 dà x - 1 e resto 0
 </pre></div>
 </div>
 </div>
 </div>
+<p>Il polinomio <span class="math notranslate nohighlight">\(P_4\)</span> è quindi divisibile per <span class="math notranslate nohighlight">\(P_5\)</span>.<br/>
+Controlliamo la fattorizzazione di <span class="math notranslate nohighlight">\(P_4\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="n">P4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - 6\right) \left(x - 1\right)\]</div>
+</div>
+</div>
+<p>contiene effettivamente <span class="math notranslate nohighlight">\(P_5\)</span>.</p>
+<p>Riproviamo con</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># riproviamo con</span>
-<span class="n">P1</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">7</span>
+<span class="n">P6</span> <span class="o">=</span> <span class="n">P4</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -539,16 +633,67 @@ $<span class="math notranslate nohighlight">\( P_1 = Q \cdot P_2 + R \)</span>$<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># la disione risulta</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">div</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">div</span><span class="p">(</span><span class="n">P6</span><span class="p">,</span> <span class="n">P5</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La divisione di P1 e P2 da </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> e resto </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La divisione di P6 e P4 da </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> e resto </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La divisione di P1 e P2 da x - 1 e resto 1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La divisione di P6 e P4 da x - 1 e resto 1
 </pre></div>
 </div>
+</div>
+</div>
+<p>Ci ritroviamo un resto, quindi <span class="math notranslate nohighlight">\(P_6\)</span> non è divisibile per <span class="math notranslate nohighlight">\(P_4\)</span>.</p>
+</div>
+<div class="section" id="divisori">
+<h2>Divisori<a class="headerlink" href="#divisori" title="Permalink to this headline">¶</a></h2>
+<p>Conosciamo già il massimo comun divisore (GCD) e il minimo comune multiplo (lcm) di due numeri.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le sigle GCD (Greatest Common Divisor) e lcm (Least Common Multiplier) sono quelle internazionali.</p>
+</div>
+<p>Ad esempio:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># due numeri interi</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">q</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il GCD di </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> e </span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1"> è </span><span class="si">{</span><span class="n">igcd</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il lcm di </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1"> e </span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s1"> è </span><span class="si">{</span><span class="n">ilcm</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il GCD di 6 e 8 è 2.
+Il lcm di 6 e 8 è 24.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se riusciamo a scomporre due polinomi in fattori (vedi sopra), è possibile calcolarne massimo comun divisore e il minimo comune multiplo (consultare un manuale di liceo).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gcd</span><span class="p">(</span><span class="n">P4</span><span class="p">,</span> <span class="n">P5</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">QQ</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x - 6\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lcm</span><span class="p">(</span><span class="n">P4</span><span class="p">,</span> <span class="n">P5</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">QQ</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} - 7 x + 6\]</div>
 </div>
 </div>
 </div>
