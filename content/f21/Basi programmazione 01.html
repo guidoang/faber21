@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mycustom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,6 +41,7 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -53,12 +55,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Indice" href="../../genindex.html" />
+    <link rel="search" title="Cerca" href="../../search.html" />
     <link rel="next" title="I notebook" href="../nb/notebooks.html" />
     <link rel="prev" title="Chi siamo" href="../we.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="it">
     
 
     <!-- Google Analytics -->
@@ -90,7 +92,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -165,9 +167,21 @@
    I calcoli dinamici, p. 3
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fisica e computer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="vettori.html">
-   I vettori
+  <a class="reference internal" href="vettori01.html">
+   I vettori, p. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vettori02.html">
+   I vettori, p. 2
   </a>
  </li>
 </ul>
@@ -178,13 +192,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab/pendolo.html">
-   L’accelerazione di gravità
+  <a class="reference internal" href="../lab/pendolo01.html">
+   L’acceleraz. di gravità, p. 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab/pendolo2.html">
-   L’accelerazione di gravità 2
+  <a class="reference internal" href="../lab/pendolo02.html">
+   L’acceleraz. di gravità, p. 2
   </a>
  </li>
 </ul>
@@ -212,8 +226,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -221,7 +235,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -229,10 +243,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../../_sources/content/f21/Basi programmazione 01.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -242,8 +256,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -254,7 +268,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/f21/Basi programmazione 01.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lanciare Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -271,7 +285,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -338,11 +352,11 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="la-prima-lezione">
-<span id="title-basi01"></span><h1>La prima lezione<a class="headerlink" href="#la-prima-lezione" title="Permalink to this headline">¶</a></h1>
+<span id="title-basi01"></span><h1>La prima lezione<a class="headerlink" href="#la-prima-lezione" title="Link a questa intestazione">¶</a></h1>
 <p><img alt="browser" src="../../_images/browser.png" /></p>
 <p>In questa lezione vedremo le <em>basi</em> della programmazione.</p>
 <div class="section" id="i-programmi">
-<h2>I programmi<a class="headerlink" href="#i-programmi" title="Permalink to this headline">¶</a></h2>
+<h2>I programmi<a class="headerlink" href="#i-programmi" title="Link a questa intestazione">¶</a></h2>
 <p>Un <em>programma</em> è un algoritmo, cioé una serie finita di istruzioni destinata a svolgere un determinato compito.
 Una applicazione è un programma che viene eseguito su un computer; il programma deve essere <em>compilato</em>, cioè tradotto in istruzioni in binario comprensibile al computer.</p>
 <p>Il programma va scritto, cioè va scritta la sequenza di istruzioni che lo costituisce.
@@ -367,7 +381,7 @@ Le istruzioni vanno scritte in un <em>linguaggio di programmazione</em>.</p>
 </div>
 </div>
 <div class="section" id="variabili">
-<h2>Variabili<a class="headerlink" href="#variabili" title="Permalink to this headline">¶</a></h2>
+<h2>Variabili<a class="headerlink" href="#variabili" title="Link a questa intestazione">¶</a></h2>
 <p>Innanzitutto trattiamo le variabili.
 Possono essere</p>
 <ul class="simple">
@@ -378,13 +392,13 @@ Possono essere</p>
 <p>Le variabili spesso sono indicate da una lettera, ma dovrebbero avere nomi <em>brevi</em> e <em>significativi</em>.</p>
 <p>Le lettere maiuscele indicano variabili <em>diverse</em> da quelle minuscole.</p>
 <div class="section" id="variabili-numeriche">
-<h3>Variabili numeriche<a class="headerlink" href="#variabili-numeriche" title="Permalink to this headline">¶</a></h3>
+<h3>Variabili numeriche<a class="headerlink" href="#variabili-numeriche" title="Link a questa intestazione">¶</a></h3>
 <p>Le variabili numeriche possono essere:</p>
 <ul class="simple">
 <li><p>intere,</p></li>
 <li><p>decimali, cioè con il punto.</p></li>
 </ul>
-<p>Non è possibile scrivere frazioni, come <span class="math notranslate nohighlight">\(\left( \dfrac{2}{3} \right)\)</span>. E’ possibile <em>definire</em> frazioni.</p>
+<p>Non è possibile scrivere frazioni, come <span class="math notranslate nohighlight">\(\left( \dfrac{2}{3} \right)\)</span>. E” possibile <em>definire</em> frazioni.</p>
 <p>Con le variabili numeriche possiamo eseguire le normali operazioni.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -424,7 +438,7 @@ Possono essere</p>
 </div>
 </div>
 <div class="section" id="variabili-decimali">
-<h3>Variabili decimali<a class="headerlink" href="#variabili-decimali" title="Permalink to this headline">¶</a></h3>
+<h3>Variabili decimali<a class="headerlink" href="#variabili-decimali" title="Link a questa intestazione">¶</a></h3>
 <p>Il nome corretto è <em>floating point number</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -447,15 +461,15 @@ Possono essere</p>
 </div>
 </div>
 <div class="section" id="liste">
-<h2>Liste<a class="headerlink" href="#liste" title="Permalink to this headline">¶</a></h2>
+<h2>Liste<a class="headerlink" href="#liste" title="Link a questa intestazione">¶</a></h2>
 <p>Un array è una lista <em>ordinata</em> (per posizione) di numeri. Ciascun elemento della lista è individuato dalla sua posizione, o <em>indice</em>.</p>
 <p>Un array è la struttura ideale per contenere dati da analizzare.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Nota</p>
 <p>Oggi le liste di dati possono contenere <em>milioni</em> di elementi.</p>
 </div>
 <div class="section" id="i-dati">
-<h3>I dati<a class="headerlink" href="#i-dati" title="Permalink to this headline">¶</a></h3>
+<h3>I dati<a class="headerlink" href="#i-dati" title="Link a questa intestazione">¶</a></h3>
 <p>I dati sono solitamente caricati da un file, che può essere anche disponibile in rete.</p>
 <p>Vrdiamo un semplice esempio</p>
 <div class="cell docutils container">
@@ -475,7 +489,7 @@ Possono essere</p>
 </div>
 </div>
 <div class="section" id="trovare-la-media">
-<h3>Trovare la media<a class="headerlink" href="#trovare-la-media" title="Permalink to this headline">¶</a></h3>
+<h3>Trovare la media<a class="headerlink" href="#trovare-la-media" title="Link a questa intestazione">¶</a></h3>
 <p>Dato un insieme di valori (insieme, quimdi non ordinato), possiamo trvare un <em>indice di posizione</em>, cioè un <em>unico</em> mumero che provi a riassumerli.</p>
 <p>Nel caso di un insieme di valori <em>numerici</em>, un indice molto utilizzato è la <em>media</em>.
 Nel caso di dati qualitativi categorizzati, un possibile indice è la <em>moda</em>.</p>
@@ -496,7 +510,7 @@ Nel caso di dati qualitativi categorizzati, un possibile indice è la <em>moda</
 </div>
 </div>
 <div class="section" id="le-operazioni-sui-numeri">
-<h2>Le operazioni sui numeri<a class="headerlink" href="#le-operazioni-sui-numeri" title="Permalink to this headline">¶</a></h2>
+<h2>Le operazioni sui numeri<a class="headerlink" href="#le-operazioni-sui-numeri" title="Link a questa intestazione">¶</a></h2>
 <p>Scriviamo un piccolo programma di esempio.</p>
 <p>Vediamo prima come creare una lista di numeri.</p>
 <div class="cell docutils container">
@@ -566,7 +580,7 @@ Nel caso di dati qualitativi categorizzati, un possibile indice è la <em>moda</
 </div>
 </div>
 <div class="section" id="operazioni-sui-binari">
-<h3>Operazioni sui binari<a class="headerlink" href="#operazioni-sui-binari" title="Permalink to this headline">¶</a></h3>
+<h3>Operazioni sui binari<a class="headerlink" href="#operazioni-sui-binari" title="Link a questa intestazione">¶</a></h3>
 <p>Le operazioni sui numeri binari sono abbastanza misteriose.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -621,16 +635,16 @@ Operazione binaria: 5 and 2 = 0.
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../we.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../we.html" title="precedente pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">precedente</p>
             <p class="prev-next-title">Chi siamo</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../nb/notebooks.html" title="next page">
+    <a class='right-next' id="next-link" href="../nb/notebooks.html" title="successivo pagina">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">successivo</p>
         <p class="prev-next-title">I notebook</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -643,9 +657,9 @@ Operazione binaria: 5 and 2 = 0.
     <div class="container">
       <p>
         
-          By M Community<br/>
+          Di M Community<br/>
         
-            &copy; Copyright Dic 2021.<br/>
+            &copy; Diritto d'autore Gen 2022.<br/>
       </p>
     </div>
   </footer>

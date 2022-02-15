@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>I vettori &#8212; M Faber</title>
+    <title>I vettori, p. 2 &#8212; M Faber</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mycustom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,6 +41,7 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -53,12 +55,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="L’accelerazione di gravità" href="../lab/pendolo.html" />
-    <link rel="prev" title="I calcoli dinamici, p. 3" href="Basi%20programmazione%2006.html" />
+    <link rel="index" title="Indice" href="../../genindex.html" />
+    <link rel="search" title="Cerca" href="../../search.html" />
+    <link rel="next" title="L’acceleraz. di gravità, p. 1" href="../lab/pendolo01.html" />
+    <link rel="prev" title="I vettori, p. 1" href="vettori01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="it">
     
 
     <!-- Google Analytics -->
@@ -90,7 +92,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -139,7 +141,7 @@
   Matematica e computer
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Basi%20programmazione%2002.html">
    Il calcolo simbolico
@@ -165,9 +167,21 @@
    I calcoli dinamici, p. 3
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fisica e computer
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vettori01.html">
+   I vettori, p. 1
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   I vettori
+   I vettori, p. 2
   </a>
  </li>
 </ul>
@@ -178,13 +192,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab/pendolo.html">
-   L’accelerazione di gravità
+  <a class="reference internal" href="../lab/pendolo01.html">
+   L’acceleraz. di gravità, p. 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab/pendolo2.html">
-   L’accelerazione di gravità 2
+  <a class="reference internal" href="../lab/pendolo02.html">
+   L’acceleraz. di gravità, p. 2
   </a>
  </li>
 </ul>
@@ -212,8 +226,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -221,18 +235,18 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/f21/vettori.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+        <a class="dropdown-buttons" href="../../_sources/content/f21/vettori02.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -242,8 +256,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -253,8 +267,8 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/f21/vettori.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/f21/vettori02.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanciare Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -271,13 +285,13 @@
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modulo">
-   Modulo
+  <a class="reference internal nav-link" href="#una-libreria">
+   Una libreria
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -316,13 +330,12 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="i-vettori">
-<h1>I vettori<a class="headerlink" href="#i-vettori" title="Permalink to this headline">¶</a></h1>
-<p>Un aiuto per il calcolo vettoriale è offerto dalla libreria <em>numpy</em>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Esistono librerie avanzate che manipolano specificatamente i vettori.</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="i-vettori-p-2">
+<h1>I vettori, p. 2<a class="headerlink" href="#i-vettori-p-2" title="Link a questa intestazione">¶</a></h1>
+<p>Vediamo alcune operazione definibili tra vettori o tra numeri (scalari) e vettori.</p>
+<div class="section" id="una-libreria">
+<h2>Una libreria<a class="headerlink" href="#una-libreria" title="Link a questa intestazione">¶</a></h2>
+<p>L’aiuto per il calcolo vettoriale offerto dalla libreria <em>numpy</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># le librerie</span>
@@ -343,7 +356,7 @@
 \[
 \vec{a} = (2, 1) \qquad \vec{b} = (-2, 4)
 \]</div>
-<p>In Python i vettori si definiscono tramite liste; chiariamo subito con un esempio.</p>
+<p>In Python questi vettori si definiscono tramite liste.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ap</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">]</span>
@@ -352,7 +365,7 @@
 </div>
 </div>
 </div>
-<p>Le liste appena create vanno convertite in array; questo vuol dire effettuare controlli.</p>
+<p>Le liste appena create vanno convertite in array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># converte in liste (array)</span>
@@ -373,82 +386,11 @@
 </div>
 </div>
 </div>
-<p>i numeri tra parentesi quadre, separati da virgola, sono le componenti.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>I vettori possono avere due componenti (nel piano), tre componenti (nello spazio) o anche di più.
-Espressi tramite le componenti, i vettori si indicano</p>
-<ul class="simple">
-<li><p>con parentesi tonda in matematica;</p></li>
-<li><p>con parentesi quadra in Python.</p></li>
-</ul>
-</div>
-<p>E’ possibile visualizzare i vettori (in questo caso) nel piano.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># N.B. L&#39;unità di misura in figsize è il pollice</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.73</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">))</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">ap</span><span class="p">,</span> <span class="n">bp</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="o">*</span><span class="n">origin</span><span class="p">,</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
-           <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">angles</span> <span class="o">=</span> <span class="s1">&#39;xy&#39;</span><span class="p">,</span>
-           <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-
-<span class="c1"># label</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">ap</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">ap</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\vec</span><span class="si">{a}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">bp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">bp</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="sa">r</span><span class="s1">&#39;$\vec</span><span class="si">{b}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-        
-<span class="c1"># Salva la figura PRIMA di mostrarla</span>
-<span class="c1"># plt.savefig(&#39;img/vettori01.pdf&#39;,format=&#39;pdf&#39;,dpi=300,bbox_inches=&quot;tight&quot;,pad_inches=0.02)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/vettori_9_0.png" src="../../_images/vettori_9_0.png" />
-</div>
-</div>
-<p>Vediamo le possibili operazioni con i vettori.</p>
-<div class="section" id="modulo">
-<h2>Modulo<a class="headerlink" href="#modulo" title="Permalink to this headline">¶</a></h2>
-<p>Il modulo è la dimensione di un vettore.<br/>
-Dato nel piano un vettore di componenti
-<span class="math notranslate nohighlight">\(\vec{v} = (v_x, v_y)\)</span>,
-il modulo <span class="math notranslate nohighlight">\(v\)</span> (senza freccia) è</p>
-<div class="math notranslate nohighlight">
-\[
-v = \sqrt{v_x^2 + v_y^2}
-\]</div>
-<p>Nello spazio un vettore di componenti
-<span class="math notranslate nohighlight">\(\vec{v} = (v_x, v_y, v_z)\)</span>,
-ha modulo <span class="math notranslate nohighlight">\(v\)</span> (sempre senza freccia)</p>
-<div class="math notranslate nohighlight">
-\[
-v = \sqrt{v_x^2 + v_y^2  + v_z^2}
-\]</div>
-<p>Per i nostri esempi abbiamo</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La lunghezza di a è </span><span class="si">{</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La lunghezza di b è </span><span class="si">{</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La lunghezza di a è 2.24
-La lunghezza di b è 4.47
-</pre></div>
-</div>
-</div>
-</div>
+<p>Altre informazioni sono state date nella <a class="reference internal" href="vettori01.html#title-vettori01"><span class="std std-ref">lezione precedente</span></a></p>
 </div>
 <div class="section" id="addizione-e-sottrazione">
-<h2>Addizione e sottrazione<a class="headerlink" href="#addizione-e-sottrazione" title="Permalink to this headline">¶</a></h2>
-<p>Addizione e sottrazione si svolgono sommando o sottraendo le coordinate corrispondenti.</p>
+<h2>Addizione e sottrazione<a class="headerlink" href="#addizione-e-sottrazione" title="Link a questa intestazione">¶</a></h2>
+<p>Algebricamente addizione e sottrazione si svolgono sommando o sottraendo le coordinate corrispondenti.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La somma dei vettori è </span><span class="si">{</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="si">}</span><span class="s1">, la differenza è </span><span class="si">{</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -461,6 +403,7 @@ La lunghezza di b è 4.47
 </div>
 </div>
 </div>
+<p>Graficamente addizione esottrazione si ottengono con il metodo del parallelogramma. Con questo metodo i due vettori addendi vengono uniti per le code a formare due lati adiacenti di un parallelogramma.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># N.B. L&#39;unità di misura in figsize è il pollice</span>
@@ -505,16 +448,16 @@ La lunghezza di b è 4.47
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/vettori_15_0.png" src="../../_images/vettori_15_0.png" />
+<img alt="../../_images/vettori02_12_0.png" src="../../_images/vettori02_12_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="prodotto-per-uno-scalare">
-<h2>Prodotto per uno scalare<a class="headerlink" href="#prodotto-per-uno-scalare" title="Permalink to this headline">¶</a></h2>
-<p>E’ il prodotto di un vettore per un numero (detto scalare).</p>
+<h2>Prodotto per uno scalare<a class="headerlink" href="#prodotto-per-uno-scalare" title="Link a questa intestazione">¶</a></h2>
+<p>E” il prodotto di un vettore per un numero (detto scalare).</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Le grandezze fisiche possono dividersi in (almeno):</p>
+<p class="admonition-title">Nota</p>
+<p>Come abbiamo visto nella lezione precedente, le grandezze fisiche possono dividersi in (almeno):</p>
 <ul class="simple">
 <li><p>scalari, espresse da un numero (e un’unità di misura);</p></li>
 <li><p>vettoriali, se sono descritte da un vettore.</p></li>
@@ -547,7 +490,7 @@ La lunghezza di b è 4.47
 </div>
 </div>
 <div class="section" id="combinazione-lineare">
-<h2>Combinazione lineare<a class="headerlink" href="#combinazione-lineare" title="Permalink to this headline">¶</a></h2>
+<h2>Combinazione lineare<a class="headerlink" href="#combinazione-lineare" title="Link a questa intestazione">¶</a></h2>
 <p>Una <em>combinazione lineare</em> dei vettori <span class="math notranslate nohighlight">\(\vec{a}\)</span> e <span class="math notranslate nohighlight">\(\vec{b}\)</span> è un’operazione composta:</p>
 <ul class="simple">
 <li><p>il vettore <span class="math notranslate nohighlight">\(\vec{a}\)</span> è moltiplicato per uno scalare;</p></li>
@@ -573,7 +516,7 @@ La lunghezza di b è 4.47
 </div>
 </div>
 <div class="section" id="scomposizione">
-<h2>Scomposizione<a class="headerlink" href="#scomposizione" title="Permalink to this headline">¶</a></h2>
+<h2>Scomposizione<a class="headerlink" href="#scomposizione" title="Link a questa intestazione">¶</a></h2>
 <p>Supponismo di avere un vettore <span class="math notranslate nohighlight">\(\vec{v}\)</span> di componenti</p>
 <div class="math notranslate nohighlight">
 \[\vec{v} = (3, 4)\]</div>
@@ -594,8 +537,8 @@ x = 2 \quad y = \frac{1}{2}
 \]</div>
 </div>
 <div class="section" id="prodotto-scalare">
-<h2>Prodotto scalare<a class="headerlink" href="#prodotto-scalare" title="Permalink to this headline">¶</a></h2>
-<p>E’ meglio conosciuto come <em>dot product</em>.<br/>
+<h2>Prodotto scalare<a class="headerlink" href="#prodotto-scalare" title="Link a questa intestazione">¶</a></h2>
+<p>E” meglio conosciuto come <em>dot product</em>.<br/>
 Il risultato di un dot product è uno scalare, un numero.</p>
 <p>Con i vettori <span class="math notranslate nohighlight">\(\vec{a}\)</span> e <span class="math notranslate nohighlight">\(\vec{b}\)</span>, il prodotto scalare si scrive</p>
 <div class="math notranslate nohighlight">
@@ -653,17 +596,17 @@ Il risultato di un dot product è uno scalare, un numero.</p>
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Basi%20programmazione%2006.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="vettori01.html" title="precedente pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">I calcoli dinamici, p. 3</p>
+            <p class="prev-next-subtitle">precedente</p>
+            <p class="prev-next-title">I vettori, p. 1</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../lab/pendolo.html" title="next page">
+    <a class='right-next' id="next-link" href="../lab/pendolo01.html" title="successivo pagina">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">L’accelerazione di gravità</p>
+        <p class="prev-next-subtitle">successivo</p>
+        <p class="prev-next-title">L’acceleraz. di gravità, p. 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -675,9 +618,9 @@ Il risultato di un dot product è uno scalare, un numero.</p>
     <div class="container">
       <p>
         
-          By M Community<br/>
+          Di M Community<br/>
         
-            &copy; Copyright Dic 2021.<br/>
+            &copy; Diritto d'autore Gen 2022.<br/>
       </p>
     </div>
   </footer>

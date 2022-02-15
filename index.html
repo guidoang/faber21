@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mycustom.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,6 +41,7 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -51,11 +53,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="Indice" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
     <link rel="next" title="Chi siamo" href="content/we.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="it">
     
 
     <!-- Google Analytics -->
@@ -87,7 +89,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -162,9 +164,21 @@
    I calcoli dinamici, p. 3
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fisica e computer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="content/f21/vettori.html">
-   I vettori
+  <a class="reference internal" href="content/f21/vettori01.html">
+   I vettori, p. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/f21/vettori02.html">
+   I vettori, p. 2
   </a>
  </li>
 </ul>
@@ -175,13 +189,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="content/lab/pendolo.html">
-   L’accelerazione di gravità
+  <a class="reference internal" href="content/lab/pendolo01.html">
+   L’acceleraz. di gravità, p. 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="content/lab/pendolo2.html">
-   L’accelerazione di gravità 2
+  <a class="reference internal" href="content/lab/pendolo02.html">
+   L’acceleraz. di gravità, p. 2
   </a>
  </li>
 </ul>
@@ -209,8 +223,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -218,7 +232,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -226,10 +240,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/index.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -239,8 +253,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -251,7 +265,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/index.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lanciare Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -276,16 +290,21 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="benvenuti">
-<h1>Benvenuti<a class="headerlink" href="#benvenuti" title="Permalink to this headline">¶</a></h1>
-<p>E’ il sito M team.
+<h1>Benvenuti<a class="headerlink" href="#benvenuti" title="Link a questa intestazione">¶</a></h1>
+<p>E” il sito M team.
 Guarda <a class="reference internal" href="content/we.html#fig-gruppo"><span class="std std-ref">chi siamo</span></a>.</p>
-<p>Vediamo cosa puoi trovare in questo sito. Molto altro ci sarà in futuro!</p>
+<p>Vediamo cosa puoi trovare in questo sito.</p>
+<div class="admonition-novita admonition">
+<p class="admonition-title">Novità!</p>
+<p>Ampliate le pagine sui <a class="reference internal" href="content/f21/vettori01.html#title-vettori01"><span class="std std-ref">vettori</span></a>.</p>
+</div>
+<p>Molto altro ci sarà in futuro!</p>
 <div class="sphinx-bs container pb-4 full-width text-left docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
 <div class="card-header docutils">
-<p class="card-text"><strong><a class="reference internal" href="content/f21/Basi%20programmazione%2001.html#title-basi01"><span class="std std-ref">Basi di programmazione</span></a></strong></p>
+<p class="card-text"><strong><a class="reference internal" href="content/f21/Basi%20programmazione%2001.html#title-basi01"><span class="std std-ref">Basi di programmazione</span></a></strong> 💻</p>
 </div>
 <div class="card-body docutils">
 <p class="card-text">Cosa serve sapere per imparare un linguaggio di programmazione e scrivere un programma <em>vero</em>.<br/>
@@ -296,7 +315,7 @@ Darai uno sguardo a Python, uno dei linguaggi del momento.</p>
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
 <div class="card-header docutils">
-<p class="card-text"><strong><a class="reference internal" href="content/f21/Basi%20programmazione%2001.html#title-basi01"><span class="std std-ref">Notebook</span></a></strong> ✍️</p>
+<p class="card-text"><strong><a class="reference internal" href="content/f21/Basi%20programmazione%2001.html#title-basi01"><span class="std std-ref">Notebook</span></a></strong> 📓</p>
 </div>
 <div class="card-body docutils">
 <p class="card-text">Imparare ad utilizzare i notebook, oggi la presentazione scientifica web più cool.<br/>
@@ -307,18 +326,18 @@ Realizzerai un <em>unico</em> documento che presenti bene un testo scientifico e
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
 <div class="card-header docutils">
-<p class="card-text"><strong><a class="reference internal" href="content/f21/Basi%20programmazione%2002.html#title-calcsimb01"><span class="std std-ref">Matematica e computer</span></a></strong></p>
+<p class="card-text"><strong><a class="reference internal" href="content/f21/Basi%20programmazione%2002.html#title-calcsimb01"><span class="std std-ref">Matematica e computer</span></a></strong> 🔣</p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Imparare ad elaborare matematica con il computer.<br/>
-Potrai sapere come svolgere i calcoli simbolici all’interno di un notebook.</p>
+<p class="card-text">Elaborare matematica e fisica con il computer.<br/>
+Imparerai come svolgere i calcoli simbolici all’interno di un notebook.</p>
 </div>
 </div>
 </div>
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
 <div class="card-header docutils">
-<p class="card-text"><strong><a class="reference internal" href="content/lab/pendolo.html#title-misurag"><span class="std std-ref">Laboratorio</span></a></strong></p>
+<p class="card-text"><strong><a class="reference internal" href="content/lab/pendolo01.html#title-misurag"><span class="std std-ref">Laboratorio</span></a></strong> ✍️</p>
 </div>
 <div class="card-body docutils">
 <p class="card-text">Utilizzare i notebook come taccuini di laboratorio.<br/>
@@ -329,9 +348,11 @@ Vedrai come realizzare una relazione di laboratorio con poca fatica.</p>
 </div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Avvertimento</p>
 <p><em>Alcune</em> pagine potrebbero dover caricare componenti aggiuntivi dalla rete.
 Per questo, navigando in questo sito, è meglio mantenere un collegamento attivo a Internet.</p>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -368,9 +389,9 @@ Per questo, navigando in questo sito, è meglio mantenere un collegamento attivo
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="content/we.html" title="next page">
+    <a class='right-next' id="next-link" href="content/we.html" title="successivo pagina">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">successivo</p>
         <p class="prev-next-title">Chi siamo</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -383,9 +404,9 @@ Per questo, navigando in questo sito, è meglio mantenere un collegamento attivo
     <div class="container">
       <p>
         
-          By M Community<br/>
+          Di M Community<br/>
         
-            &copy; Copyright Dic 2021.<br/>
+            &copy; Diritto d'autore Gen 2022.<br/>
       </p>
     </div>
   </footer>

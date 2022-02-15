@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L’accelerazione di gravità &#8212; M Faber</title>
+    <title>L’acceleraz. di gravità, p. 1 &#8212; M Faber</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mycustom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,6 +41,7 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -53,12 +55,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="L’accelerazione di gravità 2" href="pendolo2.html" />
-    <link rel="prev" title="I vettori" href="../f21/vettori.html" />
+    <link rel="index" title="Indice" href="../../genindex.html" />
+    <link rel="search" title="Cerca" href="../../search.html" />
+    <link rel="next" title="L’acceleraz. di gravità, p. 2" href="pendolo02.html" />
+    <link rel="prev" title="I vettori, p. 2" href="../f21/vettori02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="it">
     
 
     <!-- Google Analytics -->
@@ -90,7 +92,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -165,9 +167,21 @@
    I calcoli dinamici, p. 3
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fisica e computer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../f21/vettori.html">
-   I vettori
+  <a class="reference internal" href="../f21/vettori01.html">
+   I vettori, p. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../f21/vettori02.html">
+   I vettori, p. 2
   </a>
  </li>
 </ul>
@@ -179,12 +193,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   L’accelerazione di gravità
+   L’acceleraz. di gravità, p. 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="pendolo2.html">
-   L’accelerazione di gravità 2
+  <a class="reference internal" href="pendolo02.html">
+   L’acceleraz. di gravità, p. 2
   </a>
  </li>
 </ul>
@@ -212,8 +226,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -221,18 +235,18 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/lab/pendolo.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+        <a class="dropdown-buttons" href="../../_sources/content/lab/pendolo01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -242,8 +256,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -253,8 +267,8 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/lab/pendolo.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/lab/pendolo01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanciare Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -271,13 +285,13 @@
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#il-pendolo-semplice">
-   Il pendolo semplice
+  <a class="reference internal nav-link" href="#la-teoria">
+   La teoria
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -298,8 +312,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#i-valori-misurati">
-   I valori misurati
+  <a class="reference internal nav-link" href="#i-dati-ottenuti">
+   I dati ottenuti
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -323,17 +337,17 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="l-accelerazione-di-gravita">
-<span id="title-misurag"></span><h1>L’accelerazione di gravità<a class="headerlink" href="#l-accelerazione-di-gravita" title="Permalink to this headline">¶</a></h1>
-<p>L’accelerazione di gravità <span class="math notranslate nohighlight">\(g\)</span> varia da punto a punto intorno alla superficie terrestre.
+  <div class="tex2jax_ignore mathjax_ignore section" id="l-acceleraz-di-gravita-p-1">
+<span id="title-misurag"></span><h1>L’acceleraz. di gravità, p. 1<a class="headerlink" href="#l-acceleraz-di-gravita-p-1" title="Link a questa intestazione">¶</a></h1>
+<p>L’accelerazione di gravità <span class="math notranslate nohighlight">\(g\)</span> varia da punto a punto sulla e intorno alla superficie terrestre.
 Il suo valore <em>convenzionale</em> è</p>
 <div class="math notranslate nohighlight" id="equation-eq-gconv">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-gconv" title="Permalink to this equation">¶</a></span>\[g = 9.80665 \ \mathrm{m/s^2}\]</div>
-<div class="section" id="il-pendolo-semplice">
-<h2>Il pendolo semplice<a class="headerlink" href="#il-pendolo-semplice" title="Permalink to this headline">¶</a></h2>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-gconv" title="Permalink a questa equazione">¶</a></span>\[g = 9.80665 \ \mathrm{m/s^2}\]</div>
+<div class="section" id="la-teoria">
+<h2>La teoria<a class="headerlink" href="#la-teoria" title="Link a questa intestazione">¶</a></h2>
 <div class="figure align-default" id="fig-pendolo">
 <a class="reference internal image-reference" href="../../_images/fig-pendolo.png"><img alt="../../_images/fig-pendolo.png" src="../../_images/fig-pendolo.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Da OpenClipArt</span><a class="headerlink" href="#fig-pendolo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Da OpenClipArt</span><a class="headerlink" href="#fig-pendolo" title="Link a questa immagine">¶</a></p>
 </div>
 <p>Per <em>misurare</em> l’accelerazione <span class="math notranslate nohighlight">\(g\)</span>, un modo facile è utilizzare un pendolo semplice.
 Occorre misurare:</p>
@@ -343,67 +357,70 @@ Occorre misurare:</p>
 </ul>
 <p>Queste due grandezze, che misuriamo, sono legate dalla</p>
 <div class="math notranslate nohighlight" id="equation-eq-tpendolo">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-tpendolo" title="Permalink to this equation">¶</a></span>\[T = 2 \pi \sqrt{ \frac{\mathcal{l}}{g} }\]</div>
-<p>Nella relazione <a class="reference internal" href="#equation-eq-tpendolo">(2)</a>, se misuriamo <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(g\)</span>, l’unica grandezza sperimentale ignota è <span class="math notranslate nohighlight">\(g\)</span>.<br/>
-Da questa relazione si può ricavare <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-tpendolo" title="Permalink a questa equazione">¶</a></span>\[T = 2 \pi \sqrt{ \frac{\mathcal{l}}{g} }\]</div>
+<p>In questa relazione, se misuriamo <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>, l’unica grandezza sperimentale ignota rimane <span class="math notranslate nohighlight">\(g\)</span>.<br/>
+Dalla relazione <a class="reference internal" href="#equation-eq-tpendolo">(2)</a> si può ricavare <span class="math notranslate nohighlight">\(g\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-gricav">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq-gricav" title="Permalink to this equation">¶</a></span>\[g = 4 \pi^2 \frac{\mathcal{l}}{T^2}\]</div>
-<p>Per svolgere il calcolo <a class="reference internal" href="#equation-eq-gricav">(3)</a> occorre solo la libreria</p>
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-gricav" title="Permalink a questa equazione">¶</a></span>\[g = 4 \pi^2 \frac{\mathcal{l}}{T^2}\]</div>
+<p>Per svolgere il calcolo <a class="reference internal" href="#equation-eq-gricav">(3)</a> occorre solo la libreria matematica</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gli import</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># matematica</span>
 <span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># solo per visualizzare i risultati in questa pagina</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Latex</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="l-esperimento">
-<h2>L’esperimento<a class="headerlink" href="#l-esperimento" title="Permalink to this headline">¶</a></h2>
+<h2>L’esperimento<a class="headerlink" href="#l-esperimento" title="Link a questa intestazione">¶</a></h2>
 <p>Lo scopo dell’esperimento <em>non</em> è quello di trovare <em>un</em> valore per <span class="math notranslate nohighlight">\(g\)</span>.
-Occorre trovare un valore per <span class="math notranslate nohighlight">\(g\)</span> <em>sufficientemente preciso</em> da mostrare quanto la gravità locale differisca dal valore convenzionale <a class="reference internal" href="#equation-eq-gconv">(1)</a> dato sopra.<br/>
-Diciamo che grosso modo l’errore su <span class="math notranslate nohighlight">\(g\)</span> dovrebbe essere al massimo</p>
+Occorre trovare un valore per <span class="math notranslate nohighlight">\(g\)</span> <em>sufficientemente preciso</em> da mostrare quanto la gravità locale (cioè nel luogo dove si svolge l’esperimento) differisca dal valore convenzionale <a class="reference internal" href="#equation-eq-gconv">(1)</a> dato sopra.<br/>
+Diciamo che, grosso modo, l’errore su <span class="math notranslate nohighlight">\(g\)</span> dovrebbe essere <em>al massimo</em></p>
 <div class="math notranslate nohighlight" id="equation-eq-gerror">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-gerror" title="Permalink to this equation">¶</a></span>\[e_g = \pm 0.002 \ \mathrm{m/s^2}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-gerror" title="Permalink a questa equazione">¶</a></span>\[e_g = \pm 0.002 \ \mathrm{m/s^2}\]</div>
 <p>che corrisponde ad un errore relativo</p>
 <div class="math notranslate nohighlight" id="equation-eq-gerrorrel">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-gerrorrel" title="Permalink to this equation">¶</a></span>\[e_{rg} = \frac{e_g}{g} = \pm 0.02 \%\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-gerrorrel" title="Permalink a questa equazione">¶</a></span>\[e_{rg} = \frac{e_g}{g} = \pm 0.02 \%\]</div>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>I valori misurati dell’accelerazione di gravità sono, grosso modo,</p>
+<p class="admonition-title">Suggerimento</p>
+<p>I valori già misurati dell’accelerazione di gravità cadono nell’intervallo</p>
 <div class="math notranslate nohighlight">
 \[
 9.789 \ \mathrm{m/s^2} \dots 9.823 \ \mathrm{m/s^2}
 \]</div>
 </div>
 <div class="section" id="la-lunghezza-del-pendolo">
-<h3>La lunghezza del pendolo<a class="headerlink" href="#la-lunghezza-del-pendolo" title="Permalink to this headline">¶</a></h3>
-<p>Il pendolo semplice è costituito da un filo senza massa, inestensibile di lunghezza <span class="math notranslate nohighlight">\(l\)</span>, che sostiene una massa teoricamente puntiforme.</p>
+<h3>La lunghezza del pendolo<a class="headerlink" href="#la-lunghezza-del-pendolo" title="Link a questa intestazione">¶</a></h3>
+<p>Il pendolo semplice è costituito da un filo di massa trascurabile, inestensibile, di lunghezza <span class="math notranslate nohighlight">\(l\)</span>, che sostiene una massa teoricamente puntiforme.</p>
 <p>La massa appesa ovviamente <em>non</em> può essere puntiforme; deve essere comunque di piccole dimensioni, di forma regolare e avere un baricentro determinabile.</p>
-<p>La lunghezza <span class="math notranslate nohighlight">\(l\)</span> del filo è quella compresa tra il punto di sospensione superiore, <em>fisso</em> nel sistema del laboratorio,
-e il baricentro della massa appesa.</p>
+<p>La massa del filo deve essere <em>molto, molto</em> più piccola di quella della massa appesa.<br/>
+La lunghezza <span class="math notranslate nohighlight">\(l\)</span> del filo è la distanza tra il punto di sospensione superiore, <em>fisso</em> nel sistema del laboratorio, e il baricentro della massa appesa.</p>
 <div class="admonition attention">
-<p class="admonition-title">Attention</p>
+<p class="admonition-title">Attenzione</p>
 <p>La grandezza fisica <span class="math notranslate nohighlight">\(l\)</span> <em>non</em> è quindi la semplice lunghezza del filo.<br/>
 Il punto di sostegno superiore <em>deve</em> rimanere fisso, altrimenti <em>non</em> si realizza un pendolo semplice.</p>
 </div>
 <p>L’errore relativo <a class="reference internal" href="#equation-eq-gerrorrel">(5)</a> su <span class="math notranslate nohighlight">\(g\)</span> vincola quello su <span class="math notranslate nohighlight">\(l\)</span>, che deve essere <em>più piccolo</em>.
 Quindi, se fosse per esempio <span class="math notranslate nohighlight">\(l = 2.5 \ \mathrm{m}\)</span>, l’errore su questo valore dovrebbe essere più piccolo di</p>
 <div class="math notranslate nohighlight" id="equation-eq-lerror">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-lerror" title="Permalink to this equation">¶</a></span>\[e_{l} &lt; \pm 2 \ \mathrm{mm}\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-lerror" title="Permalink a questa equazione">¶</a></span>\[e_{l} &lt; \pm 2 \ \mathrm{mm}\]</div>
 <p>Una strategiia in questo esperimento è partire con un filo il più lungo possibile; in questo modo si minimizza anche l’errore sulla posizione della massa appesa.</p>
 </div>
 <div class="section" id="il-periodo">
-<h3>Il periodo<a class="headerlink" href="#il-periodo" title="Permalink to this headline">¶</a></h3>
+<h3>Il periodo<a class="headerlink" href="#il-periodo" title="Link a questa intestazione">¶</a></h3>
 <p>Per quanto riguarda il periodo <span class="math notranslate nohighlight">\(T\)</span>, il suo errore dovrebbe essere</p>
 <div class="math notranslate nohighlight" id="equation-eq-terror">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-terror" title="Permalink to this equation">¶</a></span>\[e_{T} &lt; \pm 0.6 \ \mathrm{ms}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-terror" title="Permalink a questa equazione">¶</a></span>\[e_{T} &lt; \pm 0.6 \ \mathrm{ms}\]</div>
 <p>questa è una precisione difficile da raggiungere con <em>una sola</em> misura.</p>
 </div>
 </div>
-<div class="section" id="i-valori-misurati">
-<h2>I valori misurati<a class="headerlink" href="#i-valori-misurati" title="Permalink to this headline">¶</a></h2>
-<p>Alla fine dell’esperimento, riportiamo i valori sperimentali di <span class="math notranslate nohighlight">\(\mathcal{l}\)</span> e <span class="math notranslate nohighlight">\(g\)</span> in unità S.I.</p>
+<div class="section" id="i-dati-ottenuti">
+<h2>I dati ottenuti<a class="headerlink" href="#i-dati-ottenuti" title="Link a questa intestazione">¶</a></h2>
+<p>Alla fine dell’esperimento, riportiamo i valori sperimentali di <span class="math notranslate nohighlight">\(\mathcal{l}\)</span> e <span class="math notranslate nohighlight">\(T\)</span> in unità S.I.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># in metri</span>
@@ -416,40 +433,36 @@ Quindi, se fosse per esempio <span class="math notranslate nohighlight">\(l = 2.
 </div>
 </div>
 <div class="section" id="il-risultato">
-<h2>Il risultato<a class="headerlink" href="#il-risultato" title="Permalink to this headline">¶</a></h2>
-<p>I valori sperimentali portano ad un valore di <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<h2>Il risultato<a class="headerlink" href="#il-risultato" title="Link a questa intestazione">¶</a></h2>
+<p>Misurati <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>, occorre utilizzare la <a class="reference internal" href="#equation-eq-gricav">(3)</a> per ricavare <span class="math notranslate nohighlight">\(g\)</span>. Utilizziamo un <a class="reference internal" href="pendolo02.html#title-misurag2"><span class="std std-ref">notebook</span></a>!</p>
+<p>Se svolgiamo i conti con la calcolatrice (sconsigliato), usiamo <span class="math notranslate nohighlight">\(\pi\)</span> con una sufficiente precisione, ad esempio <span class="math notranslate nohighlight">\(3.141593\)</span>, oppure utilizziamo il tasto 𝜋 dedicato della calcolatrice.</p>
+<p>Svolgiamo il calcolo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">L</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il valore misurato di g = </span><span class="si">{</span><span class="n">g</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># visualizza</span>
+<span class="c1"># print(f&#39;Risulta g = {g:.3f}&#39;)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s1">&#39;myg&#39;</span><span class="p">,</span> <span class="n">Latex</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;$ g = </span><span class="si">{</span><span class="n">g</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> $&#39;</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il valore misurato di g = 9.794
-</pre></div>
 </div>
 </div>
-</div>
+<p>I valori misurati di <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span> portano a</p>
+<div class="pasted-math math notranslate nohighlight" id="equation-eq-gcalcdati">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-gcalcdati" title="Permalink a questa equazione">¶</a></span>\[ g = 9.794 \]</div>
 </div>
 <div class="section" id="l-errore">
-<h2>L’errore<a class="headerlink" href="#l-errore" title="Permalink to this headline">¶</a></h2>
-<p>L’errore sul valore di <span class="math notranslate nohighlight">\(g\)</span> dipende ovviamente dagli errori su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span>.</p>
-<p>Innanzitutto, se facciamo i conti con la calcolatrice, usiamo <span class="math notranslate nohighlight">\(\pi\)</span> con una sufficiente precisione:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Il valore di pi è </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="si">:</span><span class="s1">.6f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
+<h2>L’errore<a class="headerlink" href="#l-errore" title="Link a questa intestazione">¶</a></h2>
+<p>L’errore sul valore di <span class="math notranslate nohighlight">\(g\)</span> dipende ovviamente dagli errori su <span class="math notranslate nohighlight">\(l\)</span> e su <span class="math notranslate nohighlight">\(T\)</span>, che <em>devono</em> essere stimati durante l’esperimento.</p>
+<div class="admonition caution">
+<p class="admonition-title">Attenzione</p>
+<p>Gli errori su <span class="math notranslate nohighlight">\(l\)</span> e <span class="math notranslate nohighlight">\(T\)</span> <em>non</em> sono solo quelli legati agli strumenti di misura utilizzati.</p>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Il valore di pi è 3.141593
-</pre></div>
-</div>
-</div>
-</div>
-<p>opure utilizziamo il tasto <span class="math notranslate nohighlight">\(\pi\)</span> dedicato.</p>
-<p>Per calcolare l’errore sul risultato conviene utizzare un <a class="reference internal" href="pendolo2.html#title-misurag2"><span class="std std-ref">notebook</span></a> più articolato.</p>
+<p>Per calcolare l’errore sul risultato conviene assolutamente utizzare un <a class="reference internal" href="pendolo02.html#title-misurag2"><span class="std std-ref">notebook</span></a>, strumento rapido, comodo ed ed evoluto.</p>
 </div>
 </div>
 
@@ -478,17 +491,17 @@ Quindi, se fosse per esempio <span class="math notranslate nohighlight">\(l = 2.
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../f21/vettori.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../f21/vettori02.html" title="precedente pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">I vettori</p>
+            <p class="prev-next-subtitle">precedente</p>
+            <p class="prev-next-title">I vettori, p. 2</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="pendolo2.html" title="next page">
+    <a class='right-next' id="next-link" href="pendolo02.html" title="successivo pagina">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">L’accelerazione di gravità 2</p>
+        <p class="prev-next-subtitle">successivo</p>
+        <p class="prev-next-title">L’acceleraz. di gravità, p. 2</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -500,9 +513,9 @@ Quindi, se fosse per esempio <span class="math notranslate nohighlight">\(l = 2.
     <div class="container">
       <p>
         
-          By M Community<br/>
+          Di M Community<br/>
         
-            &copy; Copyright Dic 2021.<br/>
+            &copy; Diritto d'autore Gen 2022.<br/>
       </p>
     </div>
   </footer>

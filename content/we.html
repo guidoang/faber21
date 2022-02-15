@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mycustom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,6 +41,7 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -51,12 +53,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
     <link rel="next" title="La prima lezione" href="f21/Basi%20programmazione%2001.html" />
     <link rel="prev" title="Benvenuti" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="it">
     
 
     <!-- Google Analytics -->
@@ -88,7 +90,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Cerca in questo libro ..." aria-label="Cerca in questo libro ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -163,9 +165,21 @@
    I calcoli dinamici, p. 3
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Fisica e computer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="f21/vettori.html">
-   I vettori
+  <a class="reference internal" href="f21/vettori01.html">
+   I vettori, p. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="f21/vettori02.html">
+   I vettori, p. 2
   </a>
  </li>
 </ul>
@@ -176,13 +190,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="lab/pendolo.html">
-   L’accelerazione di gravità
+  <a class="reference internal" href="lab/pendolo01.html">
+   L’acceleraz. di gravità, p. 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="lab/pendolo2.html">
-   L’accelerazione di gravità 2
+  <a class="reference internal" href="lab/pendolo02.html">
+   L’acceleraz. di gravità, p. 2
   </a>
  </li>
 </ul>
@@ -210,8 +224,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Attiva / disattiva la navigazione" aria-controls="site-navigation"
+                title="Attiva / disattiva la navigazione" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -219,7 +233,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Scarica questa pagina"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -227,10 +241,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/content/we.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Scarica il file sorgente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Stampa in PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -240,8 +254,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modalità schermo intero"
+        title="Modalità schermo intero"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -252,7 +266,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/we.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Lanciare Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -269,7 +283,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Contenuti
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -290,32 +304,29 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="chi-siamo">
-<h1>Chi siamo<a class="headerlink" href="#chi-siamo" title="Permalink to this headline">¶</a></h1>
-<p>Siamo un gruppo affiatato di persone che compiono ricerche un po’ sull’antico (latino, greco) e molto sul moderno (matematica, scienze).</p>
+<h1>Chi siamo<a class="headerlink" href="#chi-siamo" title="Link a questa intestazione">¶</a></h1>
+<p>Siamo un gruppo affiatato di persone che compiono ricerche un po” sull’antico (latino, greco) e molto sul moderno (matematica, scienze).</p>
 <div class="figure align-default" id="fig-gruppo">
 <a class="reference internal image-reference" href="../_images/gruppo.png"><img alt="../_images/gruppo.png" src="../_images/gruppo.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Da OpenClipArt</span><a class="headerlink" href="#fig-gruppo" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Da OpenClipArt</span><a class="headerlink" href="#fig-gruppo" title="Link a questa immagine">¶</a></p>
 </div>
 <p>Questo gruppo è composto da</p>
 <ul class="simple">
-<li><p>Corrado,</p></li>
-<li><p>Lavinia,</p></li>
-<li><p>Lorenzo,</p></li>
-<li><p>Martina,</p></li>
-<li><p>Sofia.</p></li>
+<li><p>Corrado, Lorenzo V.;</p></li>
+<li><p>Lavinia M., Martina S., Sofia C.;</p></li>
+<li><p>Francesca N., Miriam P., Silvia M., Victoria U.</p></li>
 </ul>
 <p><video controls width=960 height=540
        src="../_static/video/mteam.mp4">
 Il tuo browser non riesce a visualizzare il video in questa pagina.
 </video></p>
 <div class="section" id="il-nostro-motto">
-<h2>Il nostro motto<a class="headerlink" href="#il-nostro-motto" title="Permalink to this headline">¶</a></h2>
-<p>E’ l’iscrizione affissa sulla plancia dell’Enterprise NCC-1701 (Star Trek TOS).</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>By G. Roddenderry
+<h2>Il nostro motto<a class="headerlink" href="#il-nostro-motto" title="Link a questa intestazione">¶</a></h2>
+<p>E” l’iscrizione affissa sulla plancia dell’Enterprise NCC-1701 (Star Trek TOS).</p>
+<blockquote>
+<div><p><strong>G. Roddenderry</strong>:
 Per spingersi coraggiosamente là dove nessuno è mai giunto prima.</p>
-</div>
+</div></blockquote>
 </div>
 </div>
 
@@ -344,16 +355,16 @@ Per spingersi coraggiosamente là dove nessuno è mai giunto prima.</p>
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../index.html" title="precedente pagina">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">precedente</p>
             <p class="prev-next-title">Benvenuti</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="f21/Basi%20programmazione%2001.html" title="next page">
+    <a class='right-next' id="next-link" href="f21/Basi%20programmazione%2001.html" title="successivo pagina">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">successivo</p>
         <p class="prev-next-title">La prima lezione</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -366,9 +377,9 @@ Per spingersi coraggiosamente là dove nessuno è mai giunto prima.</p>
     <div class="container">
       <p>
         
-          By M Community<br/>
+          Di M Community<br/>
         
-            &copy; Copyright Dic 2021.<br/>
+            &copy; Diritto d'autore Gen 2022.<br/>
       </p>
     </div>
   </footer>
